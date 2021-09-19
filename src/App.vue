@@ -1,21 +1,18 @@
 <template>
-    <h1>Avocado</h1>
-    <div>
-        <button @click="decrement">-</button>&nbsp;
-        <span v-text="count" />&nbsp;
-        <button @click="increment">+</button>
-    </div>
+    <section class="section">
+        <div class="container">
+            <h1 class="title block">Avocado</h1>
+            <counter></counter>
+            <counter></counter>
+        </div>
+    </section>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useCount } from './hooks/useCount'
+import Counter from './components/Counter.vue'
 export default defineComponent({
     name: 'App',
-    setup() {
-        return {
-            ...useCount()
-        }
-    }
+    components: { Counter },
 })
 </script>
