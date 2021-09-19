@@ -1,9 +1,9 @@
 <template>
     <nav class="level">
         <div class="level-left">
-                <button class="level-item button is-outlined" @click="decrement">-</button>&nbsp; 
-                <span class="level-item is-size-3" v-text="count" />&nbsp;
-                <button class="level-item button is-outlined" @click="increment">+</button>
+            <button class="level-item button is-outlined" @click="decrement">-</button>
+            <span class="level-item is-size-3" v-text="count" />
+            <button class="level-item button is-outlined" @click="increment">+</button>
         </div>
     </nav>
 </template>
@@ -12,7 +12,6 @@
 import { defineComponent } from 'vue'
 import { useCount } from '../hooks/useCount'
 export default defineComponent({
-    name: 'Counter',
     setup() {
         return {
             ...useCount(),
