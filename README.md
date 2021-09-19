@@ -9,5 +9,6 @@
 ```text
 --robotgon-vuejs3/
     |--public/  ... コンパイル後のJavaScriptの置き場
-    `--src/     ... コンパイル前のTypeScriptの置き場
+    |--src/     ... コンパイル前のTypeScriptの置き場
+    `--temp/    ... 一時ファイルの置き場
 ```
