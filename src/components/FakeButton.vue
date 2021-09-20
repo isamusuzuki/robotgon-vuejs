@@ -5,7 +5,7 @@
             {{ subtitlename }}
         </h2> -->
         <div class="field mt-4">
-            <button class="button is-primary" @click="testLoading">
+            <button class="button is-primary" @click="test">
                 クリック
             </button>
         </div> 
@@ -38,6 +38,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useLoading } from '../hooks/useLoading'
+import { useModal }  from '../hooks/useModal'
 
 export default defineComponent({
     // props: {
@@ -47,8 +48,19 @@ export default defineComponent({
     // },
     setup() {
         return {
-            ...useLoading()
+            ...useLoading(),
+            ...useModal()
+        }
+    },
+    methods: {
+        test() {
+            this.openLoading()
+            setTimeout(() => {
+                this.openModal({icon: '', title: '成功', body: 'やったね！'})
+                this.closeLoading()
+            }, 3000)
         }
     }
+    
 })
 </script>
