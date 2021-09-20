@@ -3,7 +3,8 @@ import { createStore, Store } from 'vuex'
 
 // ストアのステートに対して型を定義する
 export interface State {
-    count: number
+    count: number,
+    loadingActive: boolean
 }
 
 // インジェクションキーを定義する
@@ -13,6 +14,7 @@ export const key: InjectionKey<Store<State>> = Symbol()
 export const store = createStore<State>({
     state: {
         count: 0,
+        loadingActive: false
     },
     mutations: {
         increment (state) {
@@ -20,6 +22,18 @@ export const store = createStore<State>({
         },
         decrement (state) {
             state.count--
+        },
+        openLoading(state) {
+            state.loadingActive = true
+        },
+        closeLoading(state) {
+            state.loadingActive = false
+        },
+        testLoading(state) {
+            state.loadingActive = true
+            setTimeout(() => {
+                state.loadingActive = false
+            }, 3000)
         }
     }
 })
