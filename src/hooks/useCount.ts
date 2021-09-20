@@ -1,9 +1,12 @@
-import { ref } from 'vue'
+import { computed } from 'vue'
+import { useStore } from 'vuex'
+import { key } from '../store'
 
 export const useCount = () => {
-    const count = ref(0)
-    const increment = () => {count.value += 1}
-    const decrement = () => {count.value -= 1}
+    const store = useStore(key)
+    const count = computed(() => store.state.count)
+    const increment = () => { store.commit('increment') }
+    const decrement = () => { store.commit('decrement') }
 
     return {
         count,
