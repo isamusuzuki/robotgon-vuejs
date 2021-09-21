@@ -1,6 +1,6 @@
 import { InjectionKey } from 'vue'
 import { createStore, Store } from 'vuex'
-import { IModalPack } from '../typed'
+import { IModalPack } from '../types'
 
 export interface State {
     count: number
