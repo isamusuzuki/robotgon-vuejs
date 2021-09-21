@@ -4,11 +4,11 @@
         <h2 class="subtitle is-size-6 has-text-grey-light">
             {{ subtitlename }}
         </h2> -->
+        <h1 class="title">FakeButton</h1>
+        <h2 class="subtitle is-size-6">実際にはどこにもアクセスしてません</h2>
         <div class="field mt-4">
-            <button class="button is-primary" @click="test">
-                クリック
-            </button>
-        </div> 
+            <button class="button is-primary" @click="test">クリック</button>
+        </div>
         <!-- <div class="field">
             <div class="file has-name">
                 <label class="file-label">
@@ -38,7 +38,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue'
 import { useLoading } from '../hooks/useLoading'
-import { useModal }  from '../hooks/useModal'
+import { useModal } from '../hooks/useModal'
 
 export default defineComponent({
     // props: {
@@ -49,18 +49,23 @@ export default defineComponent({
     setup() {
         return {
             ...useLoading(),
-            ...useModal()
+            ...useModal(),
         }
     },
     methods: {
         test() {
             this.openLoading()
             setTimeout(() => {
-                this.openModal({icon: '', title: '成功', body: 'やったね！'})
+                this.openModal({
+                    icon:
+                        '<span class="icon has-text-success">' +
+                        '<i class="fas fa-check-circle"></i></span>',
+                    title: '成功',
+                    body: 'やったね！',
+                })
                 this.closeLoading()
             }, 3000)
-        }
-    }
-    
+        },
+    },
 })
 </script>

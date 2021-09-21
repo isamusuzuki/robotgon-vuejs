@@ -1,6 +1,7 @@
 import { computed } from 'vue'
 import { useStore } from 'vuex'
-import { key, IModalPack } from '../store/index'
+import { key } from '../store/index'
+import { IModalPack } from '../typed'
 
 export const useModal = () => {
     const store = useStore(key)

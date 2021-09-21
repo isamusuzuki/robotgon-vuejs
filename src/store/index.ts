@@ -1,12 +1,6 @@
 import { InjectionKey } from 'vue'
 import { createStore, Store } from 'vuex'
-
-// ストアのステートに対して型を定義する
-export interface IModalPack {
-    icon: string
-    title: string
-    body: string
-}
+import { IModalPack } from '../typed'
 
 export interface State {
     count: number
@@ -15,10 +9,8 @@ export interface State {
     modalPack: IModalPack
 }
 
-// インジェクションキーを定義する
 export const key: InjectionKey<Store<State>> = Symbol()
 
-// ストアを生成する
 export const store = createStore<State>({
     state: {
         count: 0,
