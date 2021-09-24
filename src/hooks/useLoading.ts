@@ -4,9 +4,9 @@ import { key } from '../store/index'
 
 export const useLoading = () => {
     const store = useStore(key)
-    const loadingActive = computed(() => store.state.loadingActive)
+    const active = computed(() => store.state.loadingActive)
 
     return {
-        loadingActive
+        active
     }
 }

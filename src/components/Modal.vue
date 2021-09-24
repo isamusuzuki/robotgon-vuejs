@@ -1,20 +1,20 @@
 <template>
-    <div class="modal" v-bind:class="{ 'is-active': modalActive }">
+    <div class="modal" v-bind:class="{ 'is-active': active }">
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
                 <p class="modal-card-title">
-                    <span v-html="modalIcon"></span>
-                    <span v-text="modalTitle"></span>
+                    <span v-html="icon"></span>
+                    <span v-text="title"></span>
                 </p>
                 <button
                     aria-label="close"
                     class="delete"
-                    v-on:click="closeModal"
+                    v-on:click="close"
                 ></button>
             </header>
             <section class="modal-card-body">
-                <span v-text="modalBody"></span>
+                <span v-text="body"></span>
             </section>
         </div>
     </div>

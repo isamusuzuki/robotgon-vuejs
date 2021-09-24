@@ -5,17 +5,17 @@ import { IModalPack } from '../types'
 
 export const useModal = () => {
     const store = useStore(key)
-    const modalActive = computed(() => store.state.modalActive)
-    const modalIcon = computed(() => store.state.modalPack.icon)
-    const modalTitle = computed(() => store.state.modalPack.title) 
-    const modalBody = computed(() => store.state.modalPack.body)
-    const closeModal = () => {store.commit('closeModal')}
+    const active = computed(() => store.state.modalActive)
+    const icon = computed(() => store.state.modalPack.icon)
+    const title = computed(() => store.state.modalPack.title) 
+    const body = computed(() => store.state.modalPack.body)
+    const close = () => {store.commit('closeModal')}
 
     return {
-        modalActive,
-        modalIcon,
-        modalTitle,
-        modalBody,
-        closeModal
+        active,
+        icon,
+        title,
+        body,
+        close
     }
 }
