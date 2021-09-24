@@ -1,8 +1,10 @@
 <template>
     <section class="section">
         <div class="container">
-            <h1 class="title block">Avocado</h1>
+            <counter></counter>
             <fake-button></fake-button>
+            <keyword-input></keyword-input>
+            <keyword-output></keyword-output>
             <loading></loading>
             <modal></modal>
         </div>
@@ -11,11 +13,21 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
+import Counter from './components/Counter.vue'
 import FakeButton from './components/FakeButton.vue'
+import KeywordInput from './components/KeywordInput.vue'
+import KeywordOutput from './components/KeywordOutput.vue'
 import Loading from './components/Loading.vue'
 import Modal from './components/Modal.vue'
 
 export default defineComponent({
-    components: { FakeButton, Loading, Modal }
+    components: {
+        Counter,
+        FakeButton,
+        KeywordInput,
+        KeywordOutput,
+        Loading,
+        Modal,
+    },
 })
 </script>

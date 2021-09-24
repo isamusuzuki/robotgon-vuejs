@@ -7,6 +7,7 @@ export interface State {
     loadingActive: boolean
     modalActive: boolean
     modalPack: IModalPack
+    keyword: string
 }
 
 export const key: InjectionKey<Store<State>> = Symbol()
@@ -16,7 +17,8 @@ export const store = createStore<State>({
         count: 0,
         loadingActive: false,
         modalActive: false,
-        modalPack: {icon: '', title: '', body: ''}
+        modalPack: {icon: '', title: '', body: ''},
+        keyword: ''
     },
     mutations: {
         increment (state) {
@@ -38,6 +40,9 @@ export const store = createStore<State>({
         closeModal(state) {
             state.modalPack = {icon: '', title: '', body: ''}
             state.modalActive = false
+        },
+        setKeyword(state, val: string) {
+            state.keyword = val
         }
     }
 })

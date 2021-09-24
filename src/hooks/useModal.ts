@@ -9,9 +9,6 @@ export const useModal = () => {
     const modalIcon = computed(() => store.state.modalPack.icon)
     const modalTitle = computed(() => store.state.modalPack.title) 
     const modalBody = computed(() => store.state.modalPack.body)
-    const openModal = (modalPack: IModalPack) => {
-        store.commit('openModal', modalPack)
-    }
     const closeModal = () => {store.commit('closeModal')}
 
     return {
@@ -19,7 +16,6 @@ export const useModal = () => {
         modalIcon,
         modalTitle,
         modalBody,
-        openModal,
         closeModal
     }
 }
