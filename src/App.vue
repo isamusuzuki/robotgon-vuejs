@@ -1,6 +1,7 @@
 <template>
     <section class="section">
         <div class="container">
+            <tango-cho></tango-cho>
             <keyword-input></keyword-input>
             <keyword-output></keyword-output>
             <fake-button></fake-button>
@@ -19,6 +20,7 @@ import KeywordInput from './components/KeywordInput.vue'
 import KeywordOutput from './components/KeywordOutput.vue'
 import Loading from './components/Loading.vue'
 import Modal from './components/Modal.vue'
+import TangoCho from './components/TangoCho.vue'
 
 export default defineComponent({
     components: {
@@ -28,6 +30,7 @@ export default defineComponent({
         KeywordOutput,
         Loading,
         Modal,
+        TangoCho,
     },
 })
 </script>
