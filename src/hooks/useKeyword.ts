@@ -4,13 +4,13 @@ import { key } from '../store/index'
 
 export const useKeyword = () => {
     const store = useStore(key)
-    
+
     const keyword = computed({
         get: () => store.state.keyword,
-        set: (val: string) => store.commit('setKeyword', val)
+        set: (val: string) => store.commit('setKeyword', val),
     })
 
     return {
-        keyword
+        keyword,
     }
 }

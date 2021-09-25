@@ -29,6 +29,6 @@ export default defineComponent({
         return {
             ...useModal(),
         }
-    }
+    },
 })
 </script>

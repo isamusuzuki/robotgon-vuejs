@@ -17,14 +17,14 @@ export const store = createStore<State>({
         count: 0,
         loadingActive: false,
         modalActive: false,
-        modalPack: {icon: '', title: '', body: ''},
-        keyword: ''
+        modalPack: { icon: '', title: '', body: '' },
+        keyword: '',
     },
     mutations: {
-        increment (state) {
+        increment(state) {
             state.count++
         },
-        decrement (state) {
+        decrement(state) {
             state.count--
         },
         openLoading(state) {
@@ -38,11 +38,11 @@ export const store = createStore<State>({
             state.modalActive = true
         },
         closeModal(state) {
-            state.modalPack = {icon: '', title: '', body: ''}
+            state.modalPack = { icon: '', title: '', body: '' }
             state.modalActive = false
         },
         setKeyword(state, val: string) {
             state.keyword = val
-        }
-    }
+        },
+    },
 })

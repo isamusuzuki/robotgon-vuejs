@@ -3,6 +3,7 @@ import { key } from '../store/index'
 
 export const useFakeButton = () => {
     const store = useStore(key)
+
     const fake = () => {
         store.commit('openLoading')
         setTimeout(() => {
@@ -15,9 +16,9 @@ export const useFakeButton = () => {
             })
             store.commit('closeLoading')
         }, 3000)
-    } 
+    }
 
     return {
-        fake
+        fake,
     }
 }

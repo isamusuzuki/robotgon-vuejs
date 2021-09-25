@@ -1,10 +1,10 @@
 <template>
     <section class="section">
         <div class="container">
-            <counter></counter>
-            <fake-button></fake-button>
             <keyword-input></keyword-input>
             <keyword-output></keyword-output>
+            <fake-button></fake-button>
+            <counter></counter>
             <loading></loading>
             <modal></modal>
         </div>
