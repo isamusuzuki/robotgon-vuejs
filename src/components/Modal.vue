@@ -1,5 +1,5 @@
 <template>
-    <div class="modal" v-bind:class="{ 'is-active': is_active }">
+    <div class="modal" v-bind:class="{ 'is-active': isActive }">
         <div class="modal-background"></div>
         <div class="modal-card">
             <header class="modal-card-head">
