@@ -1,5 +1,4 @@
-import { computed, toRef } from 'vue'
-import { reactive } from 'vue'
+import { computed, reactive, ref } from 'vue'
 
 interface IWord {
     japanese: String
@@ -7,15 +6,11 @@ interface IWord {
 }
 
 interface State {
-    newJapanese: String
-    newEnglish: String
     words: Array<IWord>
 }
 
 export const useTangoCho = () => {
     const state = reactive<State>({
-        newJapanese: '',
-        newEnglish: '',
         words: [
             {
                 japanese: 'コアラ',
@@ -27,17 +22,17 @@ export const useTangoCho = () => {
             },
         ],
     })
-    const newJapanese = toRef(state, 'newJapanese')
-    const newEnglish = toRef(state, 'newEnglish')
+    const newJapanese = ref('')
+    const newEnglish = ref('')
     const buttonDisabled = computed(
         () => newJapanese.value === '' || newEnglish.value === '')
     const addNewWord = () => {
         state.words.push({
-            japanese: state.newJapanese, 
-            english: state.newEnglish
+            japanese: newJapanese.value, 
+            english: newEnglish.value
         })
-        state.newJapanese = ''
-        state.newEnglish = ''
+        newJapanese.value = ''
+        newEnglish.value = ''
     }
     const words = computed(() => state.words)
 
