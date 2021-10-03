@@ -1,5 +1,5 @@
 <template>
-    <div class="modal" v-bind:class="{ 'is-active': active }">
+    <div class="modal" v-bind:class="{ 'is-active': isActive }">
         <div
             class="modal-background"
             style="background-color: rgba(10, 10, 10, 0.6)"

@@ -5,7 +5,7 @@ import { key } from '../store/index'
 export default () => {
     const store = useStore(key)
 
-    const active = computed(() => store.state.modalActive)
+    const isActive = computed(() => store.state.modalActive)
     const icon = computed(() => store.state.modalPack.icon)
     const title = computed(() => store.state.modalPack.title)
     const body = computed(() => store.state.modalPack.body)
@@ -14,7 +14,7 @@ export default () => {
     }
 
     return {
-        active,
+        isActive,
         icon,
         title,
         body,
