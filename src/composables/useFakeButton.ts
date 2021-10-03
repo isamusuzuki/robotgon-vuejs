@@ -1,7 +1,7 @@
 import { useStore } from 'vuex'
 import { key } from '../store/index'
 
-export const useFakeButton = () => {
+export default () => {
     const store = useStore(key)
 
     const fake = () => {

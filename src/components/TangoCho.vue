@@ -41,7 +41,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useTangoCho } from '../hooks/useTangoCho'
+import useTangoCho from '../composables/useTangoCho'
 
 export default defineComponent({
     setup() {

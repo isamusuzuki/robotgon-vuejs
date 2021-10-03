@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useCount } from '../hooks/useCount'
+import useCount from '../composables/useCount'
 
 export default defineComponent({
     setup() {

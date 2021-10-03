@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useLoading } from '../hooks/useLoading'
+import useLoading from '../composables/useLoading'
 
 export default defineComponent({
     setup() {

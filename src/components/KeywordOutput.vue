@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useKeyword } from '../hooks/useKeyword'
+import useKeyword from '../composables/useKeyword'
 
 export default defineComponent({
     setup() {

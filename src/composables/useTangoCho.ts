@@ -12,7 +12,7 @@ interface State {
     words: Array<IWord>
 }
 
-export const useTangoCho = () => {
+export default () => {
     const state = reactive<State>({
         newJapanese: '',
         newEnglish: '',
@@ -30,11 +30,12 @@ export const useTangoCho = () => {
     const newJapanese = toRef(state, 'newJapanese')
     const newEnglish = toRef(state, 'newEnglish')
     const buttonDisabled = computed(
-        () => newJapanese.value === '' || newEnglish.value === '')
+        () => newJapanese.value === '' || newEnglish.value === ''
+    )
     const addNewWord = () => {
         state.words.push({
-            japanese: state.newJapanese, 
-            english: state.newEnglish
+            japanese: state.newJapanese,
+            english: state.newEnglish,
         })
         state.newJapanese = ''
         state.newEnglish = ''

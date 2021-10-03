@@ -2,7 +2,7 @@ import { computed } from 'vue'
 import { useStore } from 'vuex'
 import { key } from '../store/index'
 
-export const useCount = () => {
+export default () => {
     const store = useStore(key)
 
     const count = computed(() => store.state.count)

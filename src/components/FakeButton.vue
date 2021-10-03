@@ -10,7 +10,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import { useFakeButton } from '../hooks/useFakeButton'
+import useFakeButton from '../composables/useFakeButton'
 
 export default defineComponent({
     setup() {
