@@ -3,9 +3,9 @@ import First from '../pages/First.vue'
 import Second from '../pages/Second.vue'
 
 export const routes = [
-    { path: '/', redirect: '/first'},
-    { path: '/first', component: First },
-    { path: '/second', component: Second },
+    { path: '/', redirect: '/first' },
+    { path: '/first', name: '1', component: First },
+    { path: '/second', name: '2', component: Second },
 ]
 
 export default createRouter({
