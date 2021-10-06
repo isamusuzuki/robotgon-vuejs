@@ -10,6 +10,12 @@
                         <li v-bind:class="{ 'is-active': isActive2 }">
                             <router-link to="/second">Second</router-link>
                         </li>
+                        <li v-bind:class="{ 'is-active': isActive3 }">
+                            <router-link to="/third">Third</router-link>
+                        </li>
+                        <li v-bind:class="{ 'is-active': isActive4 }">
+                            <router-link to="/fourth">Fourth</router-link>
+                        </li>
                     </ul>
                 </div>
             </div>
