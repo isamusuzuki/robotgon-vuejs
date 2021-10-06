@@ -14,12 +14,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue'
-import useCount from '../composables/useCount'
+import useCounter from '../composables/useCounter'
 
 export default defineComponent({
     setup() {
         return {
-            ...useCount(),
+            ...useCounter(),
         }
     },
 })

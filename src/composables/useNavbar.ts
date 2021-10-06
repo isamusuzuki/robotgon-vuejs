@@ -7,11 +7,13 @@ export default () => {
     const isActive2 = computed(() => route.name === '2')
     const isActive3 = computed(() => route.name === '3')
     const isActive4 = computed(() => route.name === '4')
+    const isActive5 = computed(() => route.name === '5')
 
     return {
         isActive1,
         isActive2,
         isActive3,
-        isActive4
+        isActive4,
+        isActive5
     }
 }

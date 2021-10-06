@@ -1,5 +1,6 @@
 <template>
     <counter></counter>
+    <counter></counter>
 </template>
 
 <script lang="ts">
