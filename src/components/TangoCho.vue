@@ -11,7 +11,7 @@
             </p>
             <p class="control">
                 <button class="button is-info"
-                    v-bind:disabled="buttonDisabled"
+                    :disabled="buttonDisabled"
                     @click="addNewWord">追加
                 </button>
             </p>
@@ -28,8 +28,8 @@
             <tbody>
                 <tr
                     v-for="(word, index) in words"
-                    v-bind:key="word.japanese"
-                    v-bind:index="index"
+                    :key="word.japanese"
+                    :index="index"
                 >
                     <td>{{ word.japanese }}</td>
                     <td>{{ word.english }}</td>

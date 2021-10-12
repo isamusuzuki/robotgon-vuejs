@@ -17,7 +17,7 @@
                             <router-link to="/fourth">Fourth</router-link>
                         </li>
                         <li v-bind:class="{ 'is-active': isActive5 }">
-                            <router-link to="/five">Five</router-link>
+                            <router-link to="/fifth">Fifth</router-link>
                         </li>
                     </ul>
                 </div>
