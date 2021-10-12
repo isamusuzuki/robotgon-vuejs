@@ -2,10 +2,10 @@
     <div class="box">
         <div class="title is-size-4">refを同時利用するカウンター２つ</div>
         <div class="columns">
-            <div class="column is-2">
+            <div class="column is-3">
                 <counter-1></counter-1>
             </div>
-            <div class="column is-2">
+            <div class="column is-3">
                 <counter-1></counter-1>
             </div>
         </div>
@@ -13,10 +13,10 @@
     <div class="box">
         <div class="title is-size-4">vuexを同時利用するカウンター２つ</div>
         <div class="columns">
-            <div class="column is-2">
+            <div class="column is-3">
                 <counter-2></counter-2>
             </div>
-            <div class="column is-2">
+            <div class="column is-3">
                 <counter-2></counter-2>
             </div>
         </div>
