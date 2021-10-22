@@ -1,8 +1,12 @@
 <template>
     <div class="block">
-        <copy-2-parent target="男の子" @childEvent="setKeyword"></copy-2-parent>
+        <copy-2-parent target="僕たち男の子" @childEvent="setKeyword"></copy-2-parent>
         &nbsp;
-        <copy-2-parent target="女の子" @childEvent="setKeyword"></copy-2-parent>
+        <copy-2-parent target="君たち女の子" @childEvent="setKeyword"></copy-2-parent>
+        &nbsp;
+        <copy-2-parent target="ヘイヘイヘイ ヘイヘイヘイ" @childEvent="setKeyword"></copy-2-parent>
+        &nbsp;
+        <copy-2-parent target="おいで遊ぼう僕らの世界へ" @childEvent="setKeyword"></copy-2-parent>
     </div>
     <div class="block">
         <div class="field">

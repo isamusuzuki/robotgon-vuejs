@@ -5,19 +5,10 @@
                 <div class="tabs">
                     <ul>
                         <li v-bind:class="{ 'is-active': isActive1 }">
-                            <router-link to="/first">First</router-link>
+                            <router-link to="/apple">Apple</router-link>
                         </li>
                         <li v-bind:class="{ 'is-active': isActive2 }">
-                            <router-link to="/second">Second</router-link>
-                        </li>
-                        <li v-bind:class="{ 'is-active': isActive3 }">
-                            <router-link to="/third">Third</router-link>
-                        </li>
-                        <li v-bind:class="{ 'is-active': isActive4 }">
-                            <router-link to="/fourth">Fourth</router-link>
-                        </li>
-                        <li v-bind:class="{ 'is-active': isActive5 }">
-                            <router-link to="/fifth">Fifth</router-link>
+                            <router-link to="/bacon">Bacon</router-link>
                         </li>
                     </ul>
                 </div>
